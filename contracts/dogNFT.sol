@@ -2,32 +2,69 @@
 pragma solidity 0.8.19;
 
 import "erc721a/contracts/ERC721A.sol";
+import "@openzeppelin/contracts/utils/Strings.sol";
 
-contract dogNFT {
-    uint public unlockTime;
-    address payable public owner;
+contract DogNFT is ERC721A{
+    using Strings for uint256;
+    uint256 public constant MAX_SUPPLY = 20;
+    uint256 public constant START_TOKEN_ID = 1;
 
-    event Withdrawal(uint amount, uint when);
+    string public baseURI;
+    string internal baseExtension = ".json";
 
-    constructor(uint _unlockTime) payable {
-        require(
-            block.timestamp < _unlockTime,
-            "Unlock time should be in the future"
-        );
-
-        unlockTime = _unlockTime;
-        owner = payable(msg.sender);
+    address public immutable owner;
+    modifier onlyOwner() {
+        require(owner == msg.sender, "Capybara: not owner");
+        _;
     }
 
-    function withdraw() public {
-        // Uncomment this line, and the import of "hardhat/console.sol", to print a log in your terminal
-        // console.log("Unlock time is %o and block timestamp is %o", unlockTime, block.timestamp);
+    /**
+     * @dev Constructor function
+     */
+    constructor() ERC721A("Capybara NFT", "CAPY") {
+        owner = msg.sender;
+    }
 
-        require(block.timestamp >= unlockTime, "You can't withdraw yet");
-        require(msg.sender == owner, "You aren't the owner");
+    /**
+     * @dev Returns the token ID
+     * @return uint256 token ID
+     * override start token id
+     */
+    function _startTokenId() internal view virtual override returns (uint256) {
+        return START_TOKEN_ID;
+    }
 
-        emit Withdrawal(address(this).balance, block.timestamp);
+    function mint(uint256 quantity) public payable {
+        require(
+            totalSupply() + quantity <= MAX_SUPPLY,
+            "Capybara: exceed max supply"
+        );
+        _mint(msg.sender, quantity);
+    }
 
-        owner.transfer(address(this).balance);
+    function tokenURI(
+        uint256 tokenId
+    ) public view virtual override returns (string memory) {
+        require(_exists(tokenId), "Capybara: not exist");
+        string memory currentBaseURI = _baseURI();
+        return (
+            bytes(currentBaseURI).length > 0
+                ? string(
+                    abi.encodePacked(
+                        currentBaseURI,
+                        tokenId.toString(),
+                        baseExtension
+                    )
+                )
+                : ""
+        );
+    }
+
+    function _baseURI() internal view virtual override returns (string memory) {
+        return baseURI;
+    }
+
+    function setBaseURI(string memory _newBaseURI) external onlyOwner {
+        baseURI = _newBaseURI;
     }
 }
