@@ -1,10 +1,9 @@
-// SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.8.9;
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.19;
 
-// Uncomment this line to use console.log
-// import "hardhat/console.sol";
+import "erc721a/contracts/ERC721A.sol";
 
-contract Lock {
+contract dogNFT {
     uint public unlockTime;
     address payable public owner;
 
