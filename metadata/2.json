@@ -1,0 +1,31 @@
+{
+    "name": "PupPixel #2",
+    "description": "Finn is the Golden Retriever which a classic name royal and friendly moreover background color is mouse grey which means feel stability that is special for suggest and judgment in addition Finn has UFO bucket hat.",
+    "image": "ipfs://QmaxXzgNEhvAModpiF2FrnHuP1QwCLKbhWv6giQcGPHgcH",
+    "attributes": [
+        {
+            "trait_type": "breed",
+            "value": "Golden Retriever"
+        },
+        {
+            "trait_type": "name",
+            "value": "Finn"
+        },
+        {
+            "trait_type": "skin",
+            "value": "Peach"
+        },
+        {
+            "trait_type": "wearing",
+            "value": "UFO bucket hat"
+        },
+        {
+            "trait_type": "background",
+            "value": "Mouse grey"
+        },
+        {
+            "trait_type": "color-palette",
+            "value": "8-Bit"
+        }
+    ]
+}

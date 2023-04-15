@@ -1,0 +1,31 @@
+{
+    "name": "PupPixel #12",
+    "description": "Bailey is the Golden Retriever which a name that means 'bailiff' or 'steward' and would be fitting for a faithful and dependable golden retriever moreover background color is steel blue which means a strong feeling when you fight with feel blue in addition Bailey has Luffy bucket hat.",
+    "image": "ipfs://QmNSZk4bv7zt7hj95MtHVJG8NdM2dJEFn5x3f1FBDf9nuU",
+    "attributes": [
+        {
+            "trait_type": "breed",
+            "value": "Golden Retriever"
+        },
+        {
+            "trait_type": "name",
+            "value": "Bailey"
+        },
+        {
+            "trait_type": "skin",
+            "value": "Linen"
+        },
+        {
+            "trait_type": "wearing",
+            "value": "Luffy bucket hat"
+        },
+        {
+            "trait_type": "background",
+            "value": "Steel blue"
+        },
+        {
+            "trait_type": "color-palette",
+            "value": "8-Bit"
+        }
+    ]
+}
