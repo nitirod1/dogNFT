@@ -42,7 +42,7 @@ contract DogNFT is ERC721A , AccessControl{
     function mint() external payable onlyRole(Controller){
         require(
             totalSupply()+1 <= MAX_SUPPLY,
-            "Capybara: exceed max supply"
+            "PupPixel: exceed max supply"
         );
         _mint(msg.sender, 1);
     }
@@ -50,7 +50,7 @@ contract DogNFT is ERC721A , AccessControl{
     function tokenURI(
         uint256 tokenId
     ) public view virtual override returns (string memory) {
-        require(_exists(tokenId), "Capybara: not exist");
+        require(_exists(tokenId), "Puppixel: not exist");
         string memory currentBaseURI = _baseURI();
         return (
             bytes(currentBaseURI).length > 0
