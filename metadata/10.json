@@ -1,0 +1,31 @@
+{
+    "name": "PupPixel #10",
+    "description": "Cooper is the Golden Retriever which A name that has a friendly and playful feel, which would be fitting for the breed's sociable moreover background color is mauve which means feel elegance that is confident and beauty.",
+    "image": "ipfs://QmfF9VnNzEM8hvQ99BQymMLAAY6JEgAjQyBr9fuqP6EhXt",
+    "attributes": [
+        {
+            "trait_type": "breed",
+            "value": "Golden Retriever"
+        },
+        {
+            "trait_type": "name",
+            "value": "Cooper"
+        },
+        {
+            "trait_type": "skin",
+            "value": "Light Apricot"
+        },
+        {
+            "trait_type": "wearing",
+            "value": null
+        },
+        {
+            "trait_type": "background",
+            "value": "Mauve"
+        },
+        {
+            "trait_type": "color-palette",
+            "value": "8-Bit"
+        }
+    ]
+}
