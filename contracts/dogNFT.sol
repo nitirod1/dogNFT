@@ -9,23 +9,16 @@ import "@openzeppelin/contracts/access/AccessControl.sol";
 contract DogNFT is ERC721A , AccessControl{
     using Strings for uint256;
     uint256 public constant MAX_SUPPLY = 20;
-    using Counters for Counters.Counter;
-    Counters.Counter private _tokenIdCounter;
 
     uint256 internal START_TOKEN_ID ;
     string public baseURI;
     string internal baseExtension = ".json";
     bytes32 internal constant Controller = keccak256("Controller");
 
-    address public immutable owner;
-
     /**
      * @dev Constructor function
      */
     constructor() ERC721A("PupPixel", "PPX") {
-        owner = msg.sender;
-        _tokenIdCounter.increment();
-        START_TOKEN_ID = _tokenIdCounter.current();
         _grantRole(Controller, msg.sender);
     }
 
@@ -38,13 +31,12 @@ contract DogNFT is ERC721A , AccessControl{
         return START_TOKEN_ID;
     }
 
-
-    function mint() external payable onlyRole(Controller){
+    function mint(uint256 quantity) external payable onlyRole(Controller){
         require(
-            totalSupply()+1 <= MAX_SUPPLY,
-            "Capybara: exceed max supply"
+            totalSupply()+quantity <= MAX_SUPPLY,
+            "PupPixel: exceed max supply"
         );
-        _mint(msg.sender, 1);
+        _mint(msg.sender, quantity);
     }
 
     function tokenURI(
