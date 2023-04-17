@@ -1,0 +1,31 @@
+{
+    "name": "PupPixel #13",
+    "description": "Bailey is the Golden Retriever which a name that means 'bailiff' or 'steward' and would be fitting for a faithful and dependable golden retriever moreover background color is mauve which means feel elegance that is confident in addition Bailey has UFO bucket hat.",
+    "image": "ipfs://QmW3jrUJqi8HeMmvveDjzuAfBDLNniD9PwsCNdg7tcd4oo",
+    "attributes": [
+        {
+            "trait_type": "breed",
+            "value": "Golden Retriever"
+        },
+        {
+            "trait_type": "name",
+            "value": "Bailey"
+        },
+        {
+            "trait_type": "skin",
+            "value": "Linen"
+        },
+        {
+            "trait_type": "wearing",
+            "value": "UFO bucket hat"
+        },
+        {
+            "trait_type": "background",
+            "value": "Mauve"
+        },
+        {
+            "trait_type": "color-palette",
+            "value": "8-Bit"
+        }
+    ]
+}

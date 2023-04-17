@@ -1,0 +1,31 @@
+{
+    "name": "PupPixel #9",
+    "description": "Cooper is the Golden Retriever which A name that has a friendly and playful feel, which would be fitting for the breed's sociable moreover background color is mouse grey which means feel stability that is special for suggest and judgment in addition Cooper has Luffy bucket hat.",
+    "image": "ipfs://QmabCk3kogUsjaSYSG9SChZLdt9cwyjiodqCvur9A5BESb",
+    "attributes": [
+        {
+            "trait_type": "breed",
+            "value": "Golden Retriever"
+        },
+        {
+            "trait_type": "name",
+            "value": "Cooper"
+        },
+        {
+            "trait_type": "skin",
+            "value": "Light Apricot"
+        },
+        {
+            "trait_type": "wearing",
+            "value": "Luffy bucket hat"
+        },
+        {
+            "trait_type": "background",
+            "value": "Mouse grey"
+        },
+        {
+            "trait_type": "color-palette",
+            "value": "8-Bit"
+        }
+    ]
+}

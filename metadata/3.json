@@ -1,0 +1,31 @@
+{
+    "name": "PupPixel #3",
+    "description": "Finn is the Golden Retriever which a classic name royal and friendly moreover background color is mauve which means feel elegance that is confident and beauty  in addition Finn has The Mask bowler hat.",
+    "image": "ipfs://QmXEd8vY4DwKXbdaxm9P8CBnXwGjSpsUKsDTr6aQGNsGxn",
+    "attributes": [
+        {
+            "trait_type": "breed",
+            "value": "Golden Retriever"
+        },
+        {
+            "trait_type": "name",
+            "value": "Finn"
+        },
+        {
+            "trait_type": "skin",
+            "value": "Peach"
+        },
+        {
+            "trait_type": "wearing",
+            "value": "The Mask bowler hat"
+        },
+        {
+            "trait_type": "background",
+            "value": "Mauve"
+        },
+        {
+            "trait_type": "color-palette",
+            "value": "8-Bit"
+        }
+    ]
+}

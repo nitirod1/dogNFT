@@ -1,0 +1,31 @@
+{
+    "name": "PupPixel #0",
+    "description": "Honey is the Golden Retriever which a name that references the breed's sweet nature and golden coat moreover background color is steel blue which means inspire feelings of creativity and imagination in addition Honey has Hijab.",
+    "image": "ipfs://QmQEZMCkvsLoWkPE7Bcvg7cFfs637wdBp116ru4DEkoacg",
+    "attributes": [
+        {
+            "trait_type": "breed",
+            "value": "Golden Retriever"
+        },
+        {
+            "trait_type": "name",
+            "value": "Honey"
+        },
+        {
+            "trait_type": "skin",
+            "value": "Pale Apricot"
+        },
+        {
+            "trait_type": "wearing",
+            "value": "Hijab"
+        },
+        {
+            "trait_type": "background",
+            "value": "Amethyst"
+        },
+        {
+            "trait_type": "color-palette",
+            "value": "8-Bit"
+        }
+    ]
+}

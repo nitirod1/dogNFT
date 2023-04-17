@@ -1,0 +1,31 @@
+{
+    "name": "PupPixel #7",
+    "description": "Cooper is the Golden Retriever which A name that has a friendly and playful feel, which would be fitting for the breed's sociable moreover background color is steel blue which means a strong feeling when you fight with feel blue in addition Cooper has UFO bucket hat.",
+    "image": "ipfs://QmbU4XLQEh1EFSARcb7ESqgRdAKLBBHJ7jF28YRaTe6uBv",
+    "attributes": [
+        {
+            "trait_type": "breed",
+            "value": "Golden Retriever"
+        },
+        {
+            "trait_type": "name",
+            "value": "Cooper"
+        },
+        {
+            "trait_type": "skin",
+            "value": "Light Apricot"
+        },
+        {
+            "trait_type": "wearing",
+            "value": "UFO bucket hat"
+        },
+        {
+            "trait_type": "background",
+            "value": "Steel blue"
+        },
+        {
+            "trait_type": "color-palette",
+            "value": "8-Bit"
+        }
+    ]
+}

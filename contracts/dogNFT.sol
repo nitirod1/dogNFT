@@ -4,22 +4,21 @@ pragma solidity 0.8.19;
 import "erc721a/contracts/ERC721A.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
-import "@openzeppelin/contracts/access/AccessControl.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract DogNFT is ERC721A , AccessControl{
+contract DogNFT is ERC721A , Ownable{
     using Strings for uint256;
     uint256 public constant MAX_SUPPLY = 20;
 
     uint256 internal START_TOKEN_ID ;
     string public baseURI;
     string internal baseExtension = ".json";
-    bytes32 internal constant Controller = keccak256("Controller");
 
     /**
      * @dev Constructor function
      */
     constructor() ERC721A("PupPixel", "PPX") {
-        _grantRole(Controller, msg.sender);
+        START_TOKEN_ID = 1;
     }
 
     /**
@@ -31,7 +30,7 @@ contract DogNFT is ERC721A , AccessControl{
         return START_TOKEN_ID;
     }
 
-    function mint(uint256 quantity) external payable onlyRole(Controller){
+    function mint(uint256 quantity) external payable onlyOwner{
         require(
             totalSupply()+quantity <= MAX_SUPPLY,
             "PupPixel: exceed max supply"
@@ -61,13 +60,13 @@ contract DogNFT is ERC721A , AccessControl{
         return baseURI;
     }
 
-    function setBaseURI(string memory _newBaseURI) external onlyRole(Controller) {
+    function setBaseURI(string memory _newBaseURI) external onlyOwner{
         baseURI = _newBaseURI;
     }
 
     function supportsInterface(
         bytes4 interfaceId
-    ) public view override(ERC721A, AccessControl) returns (bool) {
+    ) public view override(ERC721A) returns (bool) {
         return super.supportsInterface(interfaceId);
     }
 }

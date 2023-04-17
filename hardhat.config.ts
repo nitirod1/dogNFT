@@ -11,6 +11,10 @@ const config: HardhatUserConfig = {
       url: SEPOLIA_RPC || "",
       accounts: [PRIVATE_KEY as string],
     },
+    goerli: {
+      url: GOERLI_RPC || "",
+      accounts: [PRIVATE_KEY as string],
+    },
     
   },
   etherscan: {
